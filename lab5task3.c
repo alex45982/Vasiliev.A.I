@@ -1,15 +1,17 @@
 #include <stdio.h>
 
-int main()
-{
-	int a, b, c, ac, bc;
+int main() {
+	int a, b, c, x = 0;
 
-	printf("enter a,b,c (a<c<b): ");
+	printf("enter a, b, c: ");
 	scanf_s("%i %i %i", &a, &b, &c);
 
-	ac = abs(a - c);
-	bc = abs(b - c);
-	printf("ac*bc=%i", ac * bc);
+	x = a;
+	a = b;
+	b = c;
+	c = x;
+
+	printf("a=%i\nb=%i\nc=%i\n", a, b, c);
 
 	return 0;
 }
